@@ -3,5 +3,6 @@
         "ndata",
         "newdata",
         "predata"
-    ]
+    ],
+    "python.pythonPath": "C:\\Python38\\python.exe"
 }

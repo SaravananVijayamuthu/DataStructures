@@ -48,12 +48,16 @@ public class Traversal {
     public static void main(String[] args) {
         Traversal T = new Traversal();
         Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        for(int i=1;i<n;i++)
-        {
-            T.push(i);
+        try{
+            int n = sc.nextInt();
+            for(int i=1;i<n;i++)
+            {
+                T.push(i);
+            }
+            // T.push(11);
+            T.print();
+        }finally{
+            sc.close();
         }
-        // T.push(11);
-        T.print();
     }
 }

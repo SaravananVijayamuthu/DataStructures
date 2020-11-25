@@ -1,9 +1,9 @@
-package LinkedList.SinglyLinkedList;
+// How do you find the middle element of a singly linked list in one pass?
+package LinkedList.Problems;
 
 import java.util.Scanner;
 
-public class middleLinkedList {
-    // Basic structure
+public class MiddleElementOfLinkedList {
     Node head;
 
     static class Node {
@@ -16,7 +16,7 @@ public class middleLinkedList {
         }
     }
 
-    // push
+    // push data
     public void push(int ndata) {
         Node newdata = new Node(ndata);
         if (head == null) {
@@ -32,7 +32,7 @@ public class middleLinkedList {
         return;
     }
 
-    // mid -> Here we r going to use two pointers
+    // mid -> here we are using two pointers
     public void mid() {
         Node st = head;
         Node nd = head;
@@ -46,7 +46,7 @@ public class middleLinkedList {
         System.out.println("The mid ele is -> " + st.data);
     }
 
-    // Print
+    // print
     public void print() {
         Node n = head;
         while (n != null) {
@@ -57,13 +57,13 @@ public class middleLinkedList {
 
     // main
     public static void main(String[] args) {
-        middleLinkedList m = new middleLinkedList();
+        MiddleElementOfLinkedList mid = new MiddleElementOfLinkedList();
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         for (int i = 1; i < n; i++) {
-            m.push(i);
+            mid.push(i);
         }
-        m.print();
-        m.mid();
+        mid.print();
+        mid.mid();
     }
 }

@@ -90,13 +90,17 @@ public class Deletion {
     public static void main(String[] args) {
         Deletion D = new Deletion();
         Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        for(int i=1;i<n;i++)
-        {
-            D.push(i);
+        try{
+            int n = sc.nextInt();
+            for(int i=1;i<n;i++)
+            {
+                D.push(i);
+            }
+            // D.delK(3);
+            D.delP(1);
+            D.print();
+        }finally{
+            sc.close();
         }
-        // D.delK(3);
-        D.delP(1);
-        D.print();
     } 
 }
