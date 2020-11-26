@@ -2,6 +2,9 @@ package LinkedList.Problems;
 
 import java.util.Scanner;
 
+/**
+ * KthNodeFromEnd
+ */
 public class KthNodeFromEnd {
     Node head;
 
@@ -15,7 +18,7 @@ public class KthNodeFromEnd {
         }
     }
 
-    // push
+    // push data
     public void push(int ndata) {
         Node newdata = new Node(ndata);
         if (head == null) {
@@ -31,13 +34,12 @@ public class KthNodeFromEnd {
         return;
     }
 
-    /*get nthLastNode -> here two pointers make one pointer to reach end count will also incre. 
-    At the time of end another pointer will be in nth position */
-    public void getLastN(int Key) {
+    // get nth node
+    public void getLastNode(int Key) {
         Node fst = head;
         Node snd = head;
         int count = 0;
-        while (fst != null) {
+        while (fst.next != null) {
             fst = fst.next;
             count++;
             if (count > Key) {
@@ -60,13 +62,13 @@ public class KthNodeFromEnd {
     public static void main(String[] args) {
         KthNodeFromEnd Kth = new KthNodeFromEnd();
         Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        for (int i = 1; i < n; i++) {
+        int num = sc.nextInt();
+        for (int i = 1; i < num; i++) {
             Kth.push(i);
         }
         Kth.print();
-        System.out.print("Enter Key -> ");
+        System.out.print("Enter the Key ->");
         int Key = sc.nextInt();
-        Kth.getLastN(Key);
+        Kth.getLastNode(Key);
     }
 }
