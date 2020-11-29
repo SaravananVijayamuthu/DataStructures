@@ -25,6 +25,7 @@ This repo contains a series of DS problems solved in JAVA.
    ◾ Detect Loop/Cyclic in linked list
    ◾ Get 3rd (Kth) node end/ tail of linked list
    ◾ Remove duplicates from a sorted linked list
+   ◾ Print the linked list in reverse
 ```
 
 ## Logic
@@ -54,6 +55,13 @@ This repo contains a series of DS problems solved in JAVA.
      - Initialize a reference pointer for head node
      - Traverse the linked list till last node with ref
      - Compare the current(ref) node with next node(temp) if data matches delete the node
+
+```
+❌ __Print the linked list in reverse(iterative)__
+```
+     - Check head should not be null
+     - Call the reverse function and pass head as agrument
+     - If that argument node is not null it will check all node and till last node and again it repeats and it prints the value
 
 ```
 ## Contributing
