@@ -6,12 +6,25 @@
 
 This repo contains a series of DS problems solved in JAVA.
 
+## Directory
+
+```bash
+📦DataStructures
+ ┣ 📂LinkedList
+ ┃ ┣ 📂Problems
+ ┃ ┃ ┣ 📜DetectLoopOrCyclic.java
+ ┃ ┃ ┣ 📜KthNodeFromEnd.java
+ ┃ ┃ ┣ 📜MiddleElementOfLinkedList.java
+ ┃ ┃ ┗ 📜RemoveDuplicate.java
+```
+
 ## Problems
 
 ```
    ◾ Middle element of linked list
    ◾ Detect Loop/Cyclic in linked list
    ◾ Get 3rd (Kth) node end/ tail of linked list
+   ◾ Remove duplicates from a sorted linked list
 ```
 
 ## Logic
@@ -34,6 +47,13 @@ This repo contains a series of DS problems solved in JAVA.
      - Initialize Two pointers and head node should not be null
      - One poniter should traverse the ll by 1 till end. count will also increase
      - When n is equal to count the loop breaks and the other pointer reaches the nth value in node
+
+```
+❌ __Remove Duplicates element from a sorted linked list__
+```
+     - Initialize a reference pointer for head node
+     - Traverse the linked list till last node with ref
+     - Compare the current(ref) node with next node(temp) if data matches delete the node
 
 ```
 ## Contributing
