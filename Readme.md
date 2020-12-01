@@ -16,6 +16,8 @@ This repo contains a series of DS problems solved in JAVA.
  ┃ ┃ ┣ 📜KthNodeFromEnd.java
  ┃ ┃ ┣ 📜MiddleElementOfLinkedList.java
  ┃ ┃ ┗ 📜RemoveDuplicate.java
+ ┃ ┃ ┗ 📜PrintReverse.java
+ ┃ ┃ ┗ 📜CompareTwoLinkedList.java
 ```
 
 ## Problems
@@ -26,6 +28,7 @@ This repo contains a series of DS problems solved in JAVA.
    ◾ Get 3rd (Kth) node end/ tail of linked list
    ◾ Remove duplicates from a sorted linked list
    ◾ Print the linked list in reverse
+   ◾ Compare two linked list
 ```
 
 ## Logic
@@ -62,6 +65,13 @@ This repo contains a series of DS problems solved in JAVA.
      - Check head should not be null
      - Call the reverse function and pass head as agrument
      - If that argument node is not null it will check all node and till last node and again it repeats and it prints the value
+
+```
+❌ __Compare Two linked list__
+```
+     - Initialize two head node
+     - First check if both the head nodes are not null and check the data in both head nodes are equal
+     - Second check if both the head nodes are null
 
 ```
 ## Contributing
