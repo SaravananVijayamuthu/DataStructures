@@ -64,7 +64,7 @@ public class DetectLoopOrCyclic {
         }
         Loc.print();
         // Test line for making it in loop
-        // Loc.head.next.next.next.next = Loc.head;
+        Loc.head.next.next.next.next = Loc.head;
         if (Loc.isCyclic()) {
             System.out.println("--> List is Cyclic");
         } else {

@@ -72,7 +72,7 @@ public class CompareTwoLinkedList {
             CTL1.push(var1);
         }
         boolean res = compare(CTL.head, CTL1.head);
-        System.out.print(String.valueOf(res ? 1 : 0));
+        System.out.print("Status -> "+String.valueOf(res ? 1 : 0));
         // CTL.print();
     }
 }
