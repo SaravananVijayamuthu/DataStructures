@@ -1,11 +1,17 @@
-package DataStructure.Problems.Trees;
-
 import java.util.Scanner;
 
 /**
  * BinaryTreeInsert
  */
 public class BinaryTreeInsert {
+    static class Node{
+        int data;
+        Node right, left;
+        public Node(int data)
+        {
+            this.data = data;
+        }
+    }
     static Scanner sc = null;
     public static void main(String[] args) {
         sc = new Scanner(System.in);
@@ -26,12 +32,4 @@ public class BinaryTreeInsert {
         return root;
     }
 
-}
-class Node{
-    int data;
-    Node right, left;
-    public Node(int data)
-    {
-        this.data = data;
-    }
 }
