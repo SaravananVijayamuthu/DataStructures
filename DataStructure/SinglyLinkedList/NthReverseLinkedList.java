@@ -1,4 +1,4 @@
-package LinkedList.SinglyLinkedList;
+package DataStructure.SinglyLinkedList;
 
 import java.util.Scanner;
 
@@ -76,4 +76,8 @@ public class NthReverseLinkedList {
         int f = sc.nextInt();
         re.reverseFind(f);
     }
+
+	public String nth(int ind) {
+		return null;
+	}
 }

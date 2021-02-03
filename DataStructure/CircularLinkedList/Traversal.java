@@ -1,4 +1,4 @@
-package LinkedList.CircularLinkedList;
+package DataStructure.CircularLinkedList;
 
 import java.util.Scanner;
 

@@ -1,8 +1,8 @@
-package LinkedList.SinglyLinkedList;
+package DataStructure.SinglyLinkedList;
 
 import java.util.Scanner;
 
-public class NthnodeLinkedList {
+public class SearchLinkedList {
     Node head;
     static class Node{
         int data;
@@ -14,7 +14,7 @@ public class NthnodeLinkedList {
         }
     }
 
-    // push
+    //push
     public void push(int ndata) {
         Node newdata = new Node(ndata);
         if(head==null)
@@ -22,7 +22,7 @@ public class NthnodeLinkedList {
             head = new Node(ndata);
             return;
         }
-        newdata.next=null;
+        newdata.next = null;
         Node n = head;
         while(n.next!=null)
         {
@@ -32,19 +32,16 @@ public class NthnodeLinkedList {
         return;
     }
 
-    // nth node
-    public int Nth(int ind) {
+    // search
+    public boolean search(int key) {
         Node temp = head;
-        int count = 0;
         while(temp!=null)
         {
-            if(count == ind)
-                return temp.data;
-            count++;
-            temp=temp.next;
+            if(temp.data==key)
+                return true;
+                temp = temp.next;
         }
-        assert (false);
-        return 0;
+        return false;
     }
 
     // print
@@ -59,15 +56,22 @@ public class NthnodeLinkedList {
 
     // main
     public static void main(String[] args) {
-        NthnodeLinkedList n = new NthnodeLinkedList();
+        SearchLinkedList sl = new SearchLinkedList();
         Scanner sc = new Scanner(System.in);
-        int num = sc.nextInt();
-        for(int i=1;i<num;i++)
+        int n = sc.nextInt();
+        for(int i=1;i<n;i++)
         {
-            n.push(i);
+            sl.push(i);
         }
-        n.print();
-        int node = sc.nextInt();
-        System.out.println("Element --> "+n.Nth(node));
+        sl.print();
+        System.out.println("Enter a value to Find: ");
+        int s = sc.nextInt();
+        if(sl.search(s))
+        {
+            System.out.print(s+" --> is present");
+        }
+        else{
+            System.out.print("no");
+        }
     }
 }

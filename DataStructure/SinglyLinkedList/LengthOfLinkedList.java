@@ -1,4 +1,4 @@
-package LinkedList.SinglyLinkedList;
+package DataStructure.SinglyLinkedList;
 import java.util.Scanner;
 
 public class LengthOfLinkedList {

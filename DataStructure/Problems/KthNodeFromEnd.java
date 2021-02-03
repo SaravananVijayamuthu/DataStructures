@@ -1,9 +1,11 @@
-package LinkedList.SinglyLinkedList;
+package DataStructure.Problems;
 
 import java.util.Scanner;
 
-public class middleLinkedList {
-    // Basic structure
+/**
+ * KthNodeFromEnd
+ */
+public class KthNodeFromEnd {
     Node head;
 
     static class Node {
@@ -16,7 +18,7 @@ public class middleLinkedList {
         }
     }
 
-    // push
+    // push data
     public void push(int ndata) {
         Node newdata = new Node(ndata);
         if (head == null) {
@@ -32,21 +34,22 @@ public class middleLinkedList {
         return;
     }
 
-    // mid -> Here we r going to use two pointers
-    public void mid() {
-        Node st = head;
-        Node nd = head;
-        if (head == null) {
-            System.out.print("No LinkedList");
+    // get nth node
+    public void getLastNode(int Key) {
+        Node fst = head;
+        Node snd = head;
+        int count = 0;
+        while (fst.next != null) {
+            fst = fst.next;
+            count++;
+            if (count > Key) {
+                snd = snd.next;
+            }
         }
-        while (nd != null && nd.next != null) {
-            nd = nd.next.next;
-            st = st.next;
-        }
-        System.out.println("The mid ele is -> " + st.data);
+        System.out.println("Data -> " + snd.data + " ");
     }
 
-    // Print
+    // print
     public void print() {
         Node n = head;
         while (n != null) {
@@ -57,13 +60,15 @@ public class middleLinkedList {
 
     // main
     public static void main(String[] args) {
-        middleLinkedList m = new middleLinkedList();
+        KthNodeFromEnd Kth = new KthNodeFromEnd();
         Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        for (int i = 1; i < n; i++) {
-            m.push(i);
+        int num = sc.nextInt();
+        for (int i = 1; i < num; i++) {
+            Kth.push(i);
         }
-        m.print();
-        m.mid();
+        Kth.print();
+        System.out.print("Enter the Key ->");
+        int Key = sc.nextInt();
+        Kth.getLastNode(Key);
     }
 }

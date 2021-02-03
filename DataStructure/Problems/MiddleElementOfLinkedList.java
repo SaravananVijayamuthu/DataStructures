@@ -1,5 +1,5 @@
 // How do you find the middle element of a singly linked list in one pass?
-package LinkedList.Problems;
+package DataStructure.Problems;
 
 import java.util.Scanner;
 

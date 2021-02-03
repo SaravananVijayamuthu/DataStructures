@@ -1,9 +1,10 @@
-package LinkedList.Problems;
+package DataStructure.SinglyLinkedList;
 
 import java.util.Scanner;
 
-public class PrintReverse {
-    static Node head;
+public class middleLinkedList {
+    // Basic structure
+    Node head;
 
     static class Node {
         int data;
@@ -31,15 +32,21 @@ public class PrintReverse {
         return;
     }
 
-    // reverse
-    public void reverse(Node head) {
-        if (head == null)
-            return;
-        reverse(head.next);
-        System.out.println(head.data + " ");
+    // mid -> Here we r going to use two pointers
+    public void mid() {
+        Node st = head;
+        Node nd = head;
+        if (head == null) {
+            System.out.print("No LinkedList");
+        }
+        while (nd != null && nd.next != null) {
+            nd = nd.next.next;
+            st = st.next;
+        }
+        System.out.println("The mid ele is -> " + st.data);
     }
 
-    // print
+    // Print
     public void print() {
         Node n = head;
         while (n != null) {
@@ -50,14 +57,13 @@ public class PrintReverse {
 
     // main
     public static void main(String[] args) {
-        PrintReverse PR = new PrintReverse();
+        middleLinkedList m = new middleLinkedList();
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        for (int i = 0; i < n; i++) {
-            int var = sc.nextInt();
-            PR.push(var);
+        for (int i = 1; i < n; i++) {
+            m.push(i);
         }
-        System.out.println("Reversed Linked List");
-        PR.reverse(head);
+        m.print();
+        m.mid();
     }
 }

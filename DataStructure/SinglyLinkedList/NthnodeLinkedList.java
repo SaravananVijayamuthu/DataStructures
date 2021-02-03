@@ -1,8 +1,8 @@
-package LinkedList.SinglyLinkedList;
+package DataStructure.SinglyLinkedList;
 
 import java.util.Scanner;
 
-public class SearchLinkedList {
+public class NthnodeLinkedList {
     Node head;
     static class Node{
         int data;
@@ -14,7 +14,7 @@ public class SearchLinkedList {
         }
     }
 
-    //push
+    // push
     public void push(int ndata) {
         Node newdata = new Node(ndata);
         if(head==null)
@@ -22,7 +22,7 @@ public class SearchLinkedList {
             head = new Node(ndata);
             return;
         }
-        newdata.next = null;
+        newdata.next=null;
         Node n = head;
         while(n.next!=null)
         {
@@ -32,16 +32,19 @@ public class SearchLinkedList {
         return;
     }
 
-    // search
-    public boolean search(int key) {
+    // nth node
+    public int Nth(int ind) {
         Node temp = head;
+        int count = 0;
         while(temp!=null)
         {
-            if(temp.data==key)
-                return true;
-                temp = temp.next;
+            if(count == ind)
+                return temp.data;
+            count++;
+            temp=temp.next;
         }
-        return false;
+        assert (false);
+        return 0;
     }
 
     // print
@@ -56,22 +59,16 @@ public class SearchLinkedList {
 
     // main
     public static void main(String[] args) {
-        SearchLinkedList sl = new SearchLinkedList();
+        NthnodeLinkedList n = new NthnodeLinkedList();
         Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        for(int i=1;i<n;i++)
+        int num = sc.nextInt();
+        for(int i=0;i<num;i++)
         {
-            sl.push(i);
+            int var = sc.nextInt();
+            n.push(var);
         }
-        sl.print();
-        System.out.println("Enter a value to Find: ");
-        int s = sc.nextInt();
-        if(sl.search(s))
-        {
-            System.out.print(s+" --> is present");
-        }
-        else{
-            System.out.print("no");
-        }
+        n.print();
+        int node = sc.nextInt();
+        System.out.println("Element --> "+n.Nth(node));
     }
 }

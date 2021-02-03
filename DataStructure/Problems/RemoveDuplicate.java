@@ -1,4 +1,4 @@
-package LinkedList.Problems;
+package DataStructure.Problems;
 
 import java.util.Scanner;
 

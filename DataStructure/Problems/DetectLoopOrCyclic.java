@@ -1,11 +1,8 @@
-package LinkedList.Problems;
+package DataStructure.Problems;
 
 import java.util.Scanner;
 
-/**
- * KthNodeFromEnd
- */
-public class KthNodeFromEnd {
+public class DetectLoopOrCyclic {
     Node head;
 
     static class Node {
@@ -34,19 +31,18 @@ public class KthNodeFromEnd {
         return;
     }
 
-    // get nth node
-    public void getLastNode(int Key) {
+    // Detect loop -> here two point checking whether each meets
+    public boolean isCyclic() {
         Node fst = head;
         Node snd = head;
-        int count = 0;
-        while (fst.next != null) {
-            fst = fst.next;
-            count++;
-            if (count > Key) {
-                snd = snd.next;
+        while (fst != null && fst.next != null) {
+            fst = fst.next.next;
+            snd = snd.next;
+            if (fst == snd) {
+                return true;
             }
         }
-        System.out.println("Data -> " + snd.data + " ");
+        return false;
     }
 
     // print
@@ -60,15 +56,19 @@ public class KthNodeFromEnd {
 
     // main
     public static void main(String[] args) {
-        KthNodeFromEnd Kth = new KthNodeFromEnd();
+        DetectLoopOrCyclic Loc = new DetectLoopOrCyclic();
         Scanner sc = new Scanner(System.in);
-        int num = sc.nextInt();
-        for (int i = 1; i < num; i++) {
-            Kth.push(i);
+        int n = sc.nextInt();
+        for (int i = 1; i < n; i++) {
+            Loc.push(i);
         }
-        Kth.print();
-        System.out.print("Enter the Key ->");
-        int Key = sc.nextInt();
-        Kth.getLastNode(Key);
+        Loc.print();
+        // Test line for making it in loop
+        Loc.head.next.next.next.next = Loc.head;
+        if (Loc.isCyclic()) {
+            System.out.println("--> List is Cyclic");
+        } else {
+            System.out.println("--> List is not Cyclic");
+        }
     }
 }
