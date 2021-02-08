@@ -2,6 +2,8 @@ import java.util.Scanner;
 
 /**
  * BubbleSort
+ * Worst and Average Case Time Complexity: O(n*n)
+ * Best Case Time Complexity: O(n)
  */
 public class BubbleSort {
     // sorting
