@@ -4,7 +4,8 @@
         "EUCS",
         "ndata",
         "newdata",
-        "predata"
+        "predata",
+        "preoder"
     ],
     "python.pythonPath": "C:\\Python38\\python.exe"
 }
